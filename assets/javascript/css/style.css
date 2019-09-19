@@ -1,0 +1,19 @@
+img {
+    height: 220px;
+    width: 250px;
+    float: left;
+    margin:30px;
+} 
+body {
+    background: white;
+}
+.crystal {
+    height: 300px;
+    background: cadetblue;
+}
+.total-score {
+    height: 200px;
+    background: darkcyan;
+    width: 300px;
+    margin-top: 20px;
+}
