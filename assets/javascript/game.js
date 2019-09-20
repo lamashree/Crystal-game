@@ -15,55 +15,31 @@ $(".crystal img").each(function(){
     $(this).attr("data-value", random);
 });
 
-// for (var i = 0; i < 4; i++) {
-//     var random = Math.floor(Math.random() * 11) + 1;
-//     console.log(random);
-//     var crystal = $("img");
-//     crystal.attr({
-//         "data-random": random
-//     });
-//     //$("img").append(random);
-//     console.log(crystal);
-// }
+
 $(".crystalstone").click(function () {
     var num = parseInt($(this).attr("data-value"));
     // console.log(num);
     sumOfCrystal += num;
     console.log(sumOfCrystal);
-    $(".score-track").append(num + "");
-    if (sumOfCrystal < random_result) {
+    $("#score").text(sumOfCrystal);
+
+    if (sumOfCrystal > random_result) {
         console.log("you lose");
-        losses--;
-        ("#losses").html(losses);
+        losses++;
+        $("#losses").text(losses);
+        console.log(losses);
     }
     else if (sumOfCrystal === random_result) {
         console.log("you win");
         wins++;
-        ("#wins").html(wins);
+        $("#wins").text(wins);
+        resetAndStart();
+ 
     }
     
 });
-
-  resetAndStart();
-  
-$(".crystalstone").click(function () {
-    var num = parseInt($(this).attr("data-value"));
-    // console.log(num);
-    sumOfCrystal += num;
-    console.log(sumOfCrystal);
-    $(".score-track").append(num + "");
-    if (sumOfCrystal < random_result) {
-        console.log("you lose");
-        losses--;
-        ("#losses").html(losses);
-        resetAndStart();
-    }
-    else if (sumOfCrystal === random_result) {
-        console.log("you win");
-        wins++;
-        ("#wins").html(wins);
-        resetAndStart();
-    }
-    
-});
-
+ 
+//  function resetAndStart() {
+     
+ 
+//  resetAndStart(); 
