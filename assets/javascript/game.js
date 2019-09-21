@@ -40,7 +40,7 @@ $(".crystalstone").click(function () {
     $("#score").text(sumOfCrystal);
 
     if (sumOfCrystal > random_result) {
-        console.log("you lose");
+        confirm("you lose");
         losses++;
         $("#losses").text("losses: " + losses);
         reset()
@@ -48,7 +48,7 @@ $(".crystalstone").click(function () {
         console.log(losses);
     }
     else if (sumOfCrystal === random_result) {
-        console.log("you win");
+        confirm("congragulation!!you win");
         wins++;
         $("#wins").text("wins: " + wins);
         reset()
